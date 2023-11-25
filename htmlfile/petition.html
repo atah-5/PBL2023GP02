@@ -7,3 +7,23 @@
     ・団体証明の入力フィールド
     ・失敗or足りないデータがあった場合の赤文字表示フィールド
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>団体新規登録申込</title>
+    <!--<script src>でリンクを記入-->
+</head>
+<body>
+    <h1>新規団体登録申込</h1>
+    <div>
+        <p>団体ホームページのＵＲＬ：<input><!--CSS 文字列入力欄--></p>
+        <p>代表者メールアドレス　　：<input><!--CSS 文字列入力欄--></p>
+        <p>団体証明書　　　　　　　：<input><!--CSS 写真ファイル--></p>
+    </div>
+    <input type="submit" value="完了">  <!--ログイン押下分岐-->
+    <p><A href="{% url 'htmlfile:main' %}">戻る</A></p>
+    <!--メールでID発行-->
+</body>
+</html>
