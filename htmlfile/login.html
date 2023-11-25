@@ -5,3 +5,26 @@
     ・完了ボタン(ダメならLoginfailed.htmlへ、成功ならpost.htmlへ)
     ・足りない場合の赤文字エラー表示フィールド
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン画面</title>
+    <!--<script src>でリンクを記入-->
+</head>
+<body>
+    <h1>ログイン画面</h1>
+    <div>
+        <p>団体ＩＤ　　　：<input><!--CSS 文字列入力欄--></p>
+        <p>発行パスワード：<input><!--CSS 文字列入力欄--></p>
+        <!--<p><input type="hidden" name="login" value="on"></p>-->
+        <input type="submit" value="完了">  <!--ログイン押下 成功失敗分岐-->
+        <p><A href="{% url 'htmlfile:main' %}">戻る</A></p>
+    </div>
+
+    <!--赤文字エラー表示エリア-->
+
+    
+</body>
+</html>
