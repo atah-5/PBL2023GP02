@@ -8,4 +8,4 @@ if __name__ == '__main__':
 
 #@app.route('/main')
 def calendar():
-    return render_template('main.html',events=events)
+    return render_template('main.html')
