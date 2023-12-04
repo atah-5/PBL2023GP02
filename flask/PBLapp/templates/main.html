@@ -19,8 +19,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <!-- FullCalendarの追加 -->
-    <link rel="stylesheet" href="https://unpkg.com/@fullcalendar/core/main.css" />
-    <script src="https://unpkg.com/@fullcalendar/core/main.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 </head>
 <body>
     <div>
@@ -40,7 +39,9 @@
                 <p style="display:inline-block; padding: 8px 20%; margin-bottom: 10px; border:2px solid #333333;"><strong>
                     <!-- 団体申請フォームへの遷移リンク -->団体申請</strong></p>
                 <p style="display:inline-block; padding: 8px 20%; margin-bottom: 10px; border:2px solid #333333;"><strong>
-                    <!-- ログインフォームへの遷移リンク -->ログイン</strong></p>
+                    <!-- ログインフォームへの遷移リンク -->
+                    ログイン</strong>
+                </p>
             </center>
         </div>
 
@@ -69,9 +70,13 @@
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
+                locale:"ja",
                 events: [
-                    // イベントデータをここに追加
-                    
+                    {
+                        title: "demo",
+                        date: '2023-12-04',
+                        URL:"https://www.w2solution.co.jp/corporate/tech/fullcalendar%E4%BD%BF%E3%81%84%E6%96%B9/" 
+                    }
                 ]
             });
 
