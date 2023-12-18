@@ -59,11 +59,18 @@
 
     <script>
         // Leaflet.js
-        var map = L.map('map').setView([35.6895, 139.6917], 13);
+        var map = L.map('map').setView([42.368199, 140.988284], 11);
         L.tileLayer('https://c.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
+        var popup = L.popup();
+    L.marker([42.379457, 141.029691]).addTo(map).on('click', function (e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("<p>工大祭</p><p>〒050-0071 北海道室蘭市水元町２７−１</p> <p></p>")
+            .openOn(map);
+    });
         // FullCalendar
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
@@ -73,8 +80,8 @@
                 locale:"ja",
                 events: [
                     {
-                        title: "demo",
-                        date: '2023-12-04',
+                        title: "工大祭",
+                        date: '2023-09-16',
                         URL:"https://www.w2solution.co.jp/corporate/tech/fullcalendar%E4%BD%BF%E3%81%84%E6%96%B9/" 
                     }
                 ]
