@@ -1,0 +1,40 @@
+.cover-box {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .image-box {
+    width: 100%;
+    height: 100%;
+    background: lime;
+    transition: transform 0.3s ease;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 200px;
+  }
+  
+  .image-box:hover {
+    transform: scale(1.6);
+  }
+  
+  .dark-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: .3;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .image-box:hover + .dark-cover {
+    background-color: black;
+  }

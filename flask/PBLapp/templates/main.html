@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>メイン画面</title>
 
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
     <!-- Leaflet.jsの追加 -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -37,10 +38,18 @@
         <div style="padding: 10px; margin-bottom: 10px; border:5px double #333333;">
             <strong>イベント投稿</strong><br/>
             <center>
-                <p style="display:inline-block; padding: 8px 20%; margin-bottom: 10px; border:2px solid #333333;"><strong>
-                    <!-- 団体申請フォームへの遷移リンク --><button onclick="location.href='./petition.html'">団体申請</button></strong></p>
-                <p style="display:inline-block; padding: 8px 20%; margin-bottom: 10px; border:2px solid #333333;"><strong>
-                    <!-- ログインフォームへの遷移リンク --><button onclick="location.href='./login.html'">ログイン</button></strong></p>
+                <div class="cover-box">
+                    <div class="image-box">
+                        <p><!-- 団体申請フォームへの遷移リンク -->団体申請</p>
+                    </div>
+                    <div class="dark-cover"></div>
+                <div class="cover-box">
+                    <div class="image-box">
+                        <p><!-- ログインフォームへの遷移リンク -->ログイン</p>
+                    </div>
+                    <div class="dark-cover"></div>
+                </div>
+               
             </center>
         </div>
 
@@ -48,17 +57,17 @@
         <div>
             <center>
                 <!-- 地図 -->
-                <div id="map" style="height: 300px; width: 80%; border: 4px solid #333333;"></div>
+                <div id="map" style="width: 100%; height: 200px; border: 4px solid #333333;"></div>
 
                 <!-- カレンダー -->
-                <div id="calendar" style="margin-top: 20px; width: 80%;"></div>
+                <div id="calendar" style="margin-top: 20px; width: 100%;"></div>
             </center>
         </div>
     </div>
 
     <script>
         // Leaflet.js
-        var map = L.map('map').setView([42.3152, 140.9737], 18);
+        var map = L.map('map').setView([42.3152, 140.9738], 13);
         L.tileLayer('https://c.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
